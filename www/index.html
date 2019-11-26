@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Cart Project</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+
+
+  <header>
+    <!-- navbar  -->
+
+    <nav class="navbar navbar-expand-lg px-4">
+      <a class="navbar-brand" href="#"><img src="img/logoo.png" alt=""></a>
+      <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+        <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+        <p class="mb-0 text-capitalize"><span class="item-count">0 </span> items - $<span class="item-total">0</span></p>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav mx-auto text-capitalize">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#about">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store">store</a>
+          </li>
+        </ul>
+        <div class="nav-info-items d-none d-lg-flex ">
+          <!-- single info -->
+          <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+            <span class="info-icon mx-lg-3"><i class="fas fa-phone"></i></span>
+            <p class="mb-0">+ 45 916 380 09</p>
+          </div>
+          <!-- end of single info -->
+          <!-- single info -->
+          <!-- end of single info -->
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+  </header>
+  <div class="cart-overflow">
+    <!-- banner  -->
+    <div class="container-fluid">
+      <div class="row max-height justify-content-center align-items-center">
+        <div class="col-10 mx-auto banner text-center">
+          <h1 class="text-capitalize">welcome to <strong class="banner-title ">HuntPizza</strong></h1>
+          <a href="#store" class="btn banner-link text-uppercase my-2">menu</a>
+
+        </div>
+
+        <section class="container-content-section">
+          <h2 class="section-header">CART</h2>
+          <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+          </div>
+          <div class="cart-items">
+            <!-- <div class="cart-row">
+              <div class="cart-item cart-column">
+                <img class="cart-item-image" src="img-cart/Pepperoni.jpg" width="100" height="100">
+                <span class="cart-item-title">T-Shirt</span>
+              </div>
+              <span class="cart-price cart-column">$19.99</span>
+              <div class="cart-quantity cart-column">
+                <input class="cart-quantity-input" type="number" value="1">
+                <button class="btn btn-danger" type="button">REMOVE</button>
+              </div>
+            </div>
+            <div class="cart-row">
+              <div class="cart-item cart-column">
+                <img class="cart-item-image" src="img-cart/Ristorante.jpg" width="100" height="100">
+                <span class="cart-item-title">Album 3</span>
+              </div>
+              <span class="cart-price cart-column">$9.99</span>
+              <div class="cart-quantity cart-column">
+                <input class="cart-quantity-input" type="number" value="2">
+                <button class="btn btn-danger" type="button">REMOVE</button>
+              </div>
+            </div> -->
+          </div>
+          <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+          </div>
+          <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+
+
+        <!-- <div id="cart" class="cart"> -->
+        <!-- cart item -->
+        <!-- <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <img src="img-cart/cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <div class="item-text">
+
+              <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+            </div>
+            <a href="#" id='cart-item-remove' class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div> -->
+        <!--end of  cart item -->
+        <!-- cart item -->
+        <!-- <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <img src="img-cart/doughnut-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <div class="cart-item-text">
+
+              <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+            </div>
+            <a href="#" id='cart-item-remove' class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div> -->
+        <!--end of  cart item -->
+        <!-- cart total -->
+        <!-- <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5> $
+              <strong id="cart-total" class="font-weight-bold">10.00</strong>
+            </h5>
+          </div> -->
+        <!--end cart total -->
+        <!-- cart buttons -->
+        <!-- <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+          </div> -->
+        <!--end of  cart buttons -->
+        <!--  -->
+        <!-- </div> -->
+
+
+
+      </div>
+    </div>
+    <!--end of banner  -->
+
+    <!-- SCROLL_TOP -->
+    <a href="javascript:" id="return-to-top"><img src="img/ScrollUp.png" alt="Up" class="scroll">
+    </a>
+
+
+
+    <!-- header -->
+    <!-- about us -->
+    <section class="about py-5" id="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-10 mx-auto col-md-6 my-5">
+            <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
+            <p class="my-4 text-muted w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam
+              voluptas
+              beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et
+              omnis
+              porro at dolorum! Ad!</p>
+            <a href="#" class="btn btn-outline-secondary btn-black text-uppercase ">read more</a>
+
+          </div>
+          <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+            <div class="about-img__container">
+              <img src="img/pizza-on-plate-on-table-2918521.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of about us -->
+</div>
+
+  <!-- store -->
+  <section id="store" class="store py-5">
+    <div class="container">
+      <!-- section title -->
+      <div class="row">
+        <div class="col-10 mx-auto col-sm-6 text-center">
+          <h1 class="text-capitalize">our <strong class="banner-title ">store</strong></h1>
+        </div>
+      </div>
+      <!-- end of section title -->
+      <!--filter buttons -->
+      <div class="row">
+        <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
+          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="all">
+            all</a>
+          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+            data-filter="cakes">pizza</a>
+          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+            data-filter="cupcakes">Burger</a>
+          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+            data-filter="sweets">Kebeb</a>
+          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+            data-filter="doughnuts">Drinks</a>
+        </div>
+      </div>
+      <!-- search box -->
+      <div class="row">
+
+        <div class="col-10 mx-auto col-md-6">
+          <form>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend ">
+                <span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder='' id="search-item">
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <!--end of filter buttons -->
+
+
+      <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Pepperoni.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+              <div class="overlay">
+                <h4>Ingredients</h4>
+                <p>Tomatoes, cheese, onion, chicken, spinach</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Pepperoni</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">9.49</strong></h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Rino.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+              <div class="overlay">
+                <h4>Ingredients</h4>
+                <p>Tomatoes, cheese, onion, chicken, spinach</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Rino</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">14.99</strong>
+                </h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Roma.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+              <div class="overlay">
+                <h4>Ingredients</h4>
+                <p>Tomatoes, cheese, onion, chicken, spinach</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Roma</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">18.99</strong>
+                </h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/neeew.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+              <div class="overlay">
+                <h4>Ingredients</h4>
+                <p>Tomatoes, cheese, onion, chicken, spinach</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Marghatita</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">8.99</strong></h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Colorful.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Picollo</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">20.99</strong>
+                </h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Ristorante.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Italiana</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">8.99</strong></h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Pepperoni.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Pepperoni</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">9.49</strong></h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Rino.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Rino</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">14.99</strong>
+                </h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Roma.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Roma</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">18.99</strong>
+                </h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/neeew.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Marghatita</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">8.99</strong></h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Colorful.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Picollo</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">20.99</strong>
+                </h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/Ristorante.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">Italiana</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">8.99</strong></h5>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+
+      </div>
+  </section>
+  <!--end of store items -->
+
+
+  <!-- modal-container -->
+  <div class="container-fluid ">
+    <div class="row lightbox-container align-items-center">
+      <div class="col-10 col-md-10 mx-auto text-right lightbox-holder">
+        <span class="lightbox-close"><i class="fas fa-window-close"></i></span>
+        <div class="lightbox-item"></div>
+        <span class="lightbox-control btnLeft"><i class="fas fa-caret-left"></i></span>
+        <span class="lightbox-control btnRight"><i class="fas fa-caret-right"></i></span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>eView &copy; 2019</p>
+  </footer>
+
+
+  <!-- jquery -->
+  
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js" async></script>
+
+
+  <!-- Code injected by live-server -->
+  <script type="text/javascript">
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+	// ]]>
+  </script>
+  
+</body>
+
+</html>
